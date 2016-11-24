@@ -1,3 +1,9 @@
 #+TITLE: Index
 
-This is the home page of Magic35.
+* Introduction
+
+This is my personal webpage.
+
+* Lebenslauf
+
+* Projects

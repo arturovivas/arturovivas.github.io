@@ -1,0 +1,94 @@
+#+TITLE: ipython-babel
+#+DATE: <2015-07-02 Thu>
+#+AUTHOR: Derek
+#+EMAIL: derek.feichtinger@psi.ch
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 24.5.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+* Version information
+  
+  #+BEGIN_SRC emacs-lisp -n :exports both
+    (princ (concat
+            (format "Emacs version: %s\n"
+                    (emacs-version))
+            (format "org version: %s\n"
+                    (org-version))
+            ;; (format "ob-ipython version: %s\n"
+            ;; (pkg-info-version-info 'ob-ipython))
+            ))        
+  #+END_SRC
+
+  #+RESULTS:
+  : Emacs version: GNU Emacs 24.5.1 (x86_64-pc-linux-gnu, GTK+ Version 3.18.9)
+  :  of 2016-04-17 on lgw01-04, modified by Debian
+  : org version: 9.0.1
+
+#+BEGIN_SRC python -n :results output :session :exports both
+print "There are %d hours in a week." % (7*24)
+2**10
+#+END_SRC
+
+#+RESULTS:
+: There are 168 hours in a week.
+: Out[45]: 1024
+: 
+: 
+
+
+#+BEGIN_SRC R :results output :exports both
+sqrt(2)
+#+END_SRC
+
+
+#+RESULTS:
+: [1] 1.414214
+
+#+BEGIN_SRC ipython :session ip1 :file /tmp/image_2.png :exports both
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt 
+x = np.arange(-10,10)
+plt.plot(x, np.sin(x))
+#+END_SRC
+
+#+RESULTS:
+[[file:/tmp/image_2.png]]
+
+#+BEGIN_SRC ipython :session :file /tmp/image.png :exports both
+  plt.hist(np.random.randn(20000), bins=200)
+#+END_SRC
+
+#+RESULTS:
+[[file:/tmp/image.png]]
+
+#+BEGIN_SRC ipython :session ip1 :results value :exports both
+def foo(x):
+    return x + 9
+
+for x in range(7):
+  x = foo(x) + 7
+
+print x
+#+END_SRC  
+
+#+RESULTS:
+
+
+#+begin_src python :results output :session
+print "There are %d hours in a week." % (7*24)
+2**10
+#+end_src
+
+#+RESULTS:
+: There are 168 hours in a week.
+: Out[32]: 1024
+: 
+: 

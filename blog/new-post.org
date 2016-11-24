@@ -1,0 +1,40 @@
+#+TITLE:       My first post
+#+AUTHOR:      Arturo Vivas Vivanco
+#+EMAIL:       arturo.vivas@outlook.de
+#+DATE:        2016-11-23 Mi
+#+URI:         /blog/%y/%m/%d/my-first-post
+#+KEYWORDS:    test, test1, test2
+#+TAGS:        first, second, third
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: This is my first file
+
+
+* Introduction
+
+* Code
+
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt
+import numpy as np
+#+END_SRC
+
+#+RESULTS:
+: None
+
+#+begin_src python :exports both
+import matplotlib, numpy
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+fig=plt.figure(figsize=(4,2))
+x=numpy.linspace(-15,15)
+plt.plot(numpy.sin(x)/x)
+fig.tight_layout()
+plt.savefig('/home/magic35/Dokumente/python-matplot-fig.png')
+return '/home/magic35/Dokumente/python-matplot-fig.png' 
+#+end_src
+
+
+#+RESULTS:
+: /home/magic35/Dokumente/python-matplot-fig.png
+

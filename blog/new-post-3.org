@@ -1,0 +1,10 @@
+#+TITLE:       Test
+#+AUTHOR:      Magic35
+#+EMAIL:       magic35@magic
+#+DATE:        2016-11-24 Do
+#+URI:         /blog/%y/%m/%d/test
+#+KEYWORDS:    hola, hola2
+#+TAGS:        tre, sf
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: This is also a test
