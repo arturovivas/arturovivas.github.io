@@ -1,9 +1,11 @@
 #+TITLE: Index
+#+AUTHOR: Arturo Vivas
+#+EMAIL:  arturo.vivas@outlook.de
 
 * Introduction
 
-This is my personal webpage.
+Welcome to my personal website. 
 
 * Lebenslauf
 
-* Projects
+

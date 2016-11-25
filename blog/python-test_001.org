@@ -4,7 +4,7 @@
 #+DATE:        2016-11-25 Fr
 #+URI:         /blog/%y/%m/%d/python-test_001
 #+KEYWORDS:    python
-#+TAGS:        
+#+TAGS:        Machine Learning
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: This is a test
@@ -83,6 +83,6 @@ print "There are %d hours in a week." % (7*24)
 
 #+RESULTS:
 : There are 168 hours in a week.
-: Out[9]: 1024
+: Out[10]: 1024
 : 
 : 

@@ -1,5 +1,7 @@
 #+TITLE: About
+#+AUTHOR:      Arturo Vivas
+#+EMAIL:       arturo.vivas@outlook.de
 
 * Me
 
-  This page was done by me.
+  A Robot.
