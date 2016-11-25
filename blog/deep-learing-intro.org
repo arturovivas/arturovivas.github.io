@@ -1,0 +1,17 @@
+#+TITLE:       Deep Learning Intro
+#+AUTHOR:      Magic35
+#+EMAIL:       magic35@magic
+#+DATE:        2016-11-25 Fr
+#+URI:         /blog/%y/%m/%d/deep-learning-intro
+#+KEYWORDS:    deep learning, machine learning, python
+#+TAGS:        deep learning
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Intro
+
+
+** Deep Learning
+
+Hier is with be placed the intro.
+
+*** Intro 
