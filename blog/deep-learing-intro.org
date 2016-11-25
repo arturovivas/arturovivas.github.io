@@ -12,6 +12,6 @@
 
 ** Deep Learning
 
-Hier is with be placed the intro. This is also another. 
+Intro
 
 *** Intro 
