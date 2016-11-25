@@ -1,17 +1,13 @@
-#+TITLE: ipython-babel
-#+DATE: <2015-07-02 Thu>
-#+AUTHOR: Derek
-#+EMAIL: derek.feichtinger@psi.ch
-#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
-#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
-#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
-#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
-#+CREATOR: Emacs 24.5.1 (Org mode 8.2.10)
-#+DESCRIPTION:
-#+EXCLUDE_TAGS: noexport
-#+KEYWORDS:
-#+LANGUAGE: en
-#+SELECT_TAGS: export
+#+TITLE:       Python
+#+AUTHOR:      Magic35
+#+EMAIL:       magic35@magic
+#+DATE:        2016-11-25 Fr
+#+URI:         /blog/%y/%m/%d/python
+#+KEYWORDS:    <TODO: insert your keywords here>
+#+TAGS:        <TODO: insert your tags here>
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: This is a test
 
 * Version information
   
