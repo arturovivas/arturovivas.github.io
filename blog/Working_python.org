@@ -2,9 +2,9 @@
 #+AUTHOR:      Arturo Vivas
 #+EMAIL:       arturo.vivas@outlook.de
 #+DATE:        2016-11-25 Fr
-#+URI:         /blog/%y/%m/%d/python
-#+KEYWORDS:    <TODO: insert your keywords here>
-#+TAGS:        <TODO: insert your tags here>
+#+URI:         /blog/%y/%m/%d/Working_python
+#+KEYWORDS:    
+#+TAGS:        
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: This is a test
