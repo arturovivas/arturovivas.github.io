@@ -1,6 +1,6 @@
 #+TITLE:       Deep Learning Intro
-#+AUTHOR:      Magic35
-#+EMAIL:       magic35@magic
+#+AUTHOR:      Arturo Vivas
+#+EMAIL:       arturo.vivas@outlook.de
 #+DATE:        2016-11-25 Fr
 #+URI:         /blog/%y/%m/%d/deep-learning-intro
 #+KEYWORDS:    deep learning, machine learning, python
