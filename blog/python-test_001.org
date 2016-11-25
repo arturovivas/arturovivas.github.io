@@ -1,8 +1,8 @@
-#+TITLE:       Python_
+#+TITLE:       Python
 #+AUTHOR:      Arturo Vivas
 #+EMAIL:       arturo.vivas@outlook.de
 #+DATE:        2016-11-25 Fr
-#+URI:         /blog/%y/%m/%d/Working_python
+#+URI:         /blog/%y/%m/%d/python-test_001
 #+KEYWORDS:    python
 #+TAGS:        
 #+LANGUAGE:    en
