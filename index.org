@@ -4,8 +4,8 @@
 
 * Introduction
 
-Welcome to my personal website. 
+Hello World! Welcome to my Blog. In the next months I will be posting my journey along the Deep Learning, Natural Language Processing, and other machine learning related topics.
 
-* Lebenslauf
+
 
 
