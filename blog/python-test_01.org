@@ -84,7 +84,6 @@ print "There are %d hours in a week." % (7*24)
 #+end_src
 
 #+RESULTS:
+: 
 : There are 168 hours in a week.
-: Out[10]: 1024
-: 
-: 
+: 1024
