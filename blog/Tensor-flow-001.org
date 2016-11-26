@@ -1,0 +1,21 @@
+#+TITLE:       Tensor Flow
+#+AUTHOR:      Magic35
+#+EMAIL:       magic35@arturo.vivas@gmail.com
+#+DATE:        2016-11-27 So
+#+URI:         /blog/%y/%m/%d/tensor-flow
+#+KEYWORDS:    tensor flow, linear algebra
+#+TAGS:        tensor flow
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Introduction to Tensor Flow
+
+
+The Virtualenv was created in the folder ~home/magic35/anaconda2/envs/tensorflow/~ 
+
+
+#+BEGIN_SRC shell
+# The following line will activate the enviroment
+source ~/home/magic35/anaconda2/envs/tensorflow/bin/activate 
+# The following line will deactivate the enviroment
+source deactivate
+#+END_SRC
