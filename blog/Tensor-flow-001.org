@@ -15,7 +15,7 @@ The Virtualenv was created in the folder ~home/magic35/anaconda2/envs/tensorflow
 
 #+BEGIN_SRC shell
 # The following line will activate the enviroment
-source ~/home/magic35/anaconda2/envs/tensorflow/bin/activate 
+source /home/magic35/anaconda2/envs/tensorflow/bin/activate 
 # The following line will deactivate the enviroment
 source deactivate
 #+END_SRC
