@@ -1,21 +1,29 @@
 #+TITLE:       Tensor Flow
-#+AUTHOR:      Magic35
-#+EMAIL:       magic35@arturo.vivas@gmail.com
+#+AUTHOR:      Arturo Vivas
+#+EMAIL:       arturo.vivas@gmail.com
 #+DATE:        2016-11-27 So
-#+URI:         /blog/%y/%m/%d/tensor-flow
+#+URI:         /blog/%y/%m/%d/Tensor-flow-001
 #+KEYWORDS:    tensor flow, linear algebra
 #+TAGS:        tensor flow
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: Introduction to Tensor Flow
 
+The first very very very small program using TensorFlow. In the following lines we are going to perform a sum of two scalars. This may sound trivial, yet the important concept in the following code is the "graph" behind it.
 
-The Virtualenv was created in the folder ~home/magic35/anaconda2/envs/tensorflow/~ 
+#+BEGIN_SRC ipython :session mysession :exports both
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
 
+session = tf.Session()
 
-#+BEGIN_SRC shell
-# The following line will activate the enviroment
-source /home/magic35/anaconda2/envs/tensorflow/bin/activate 
-# The following line will deactivate the enviroment
-source deactivate
+a = tf.constant(10, name="input_a")
+b = tf.constant(20, name="input_b")
+c = tf.add(a, b, name="add_c")
+
+result = session.run(c)
+print result
 #+END_SRC
+
+#+RESULTS:
