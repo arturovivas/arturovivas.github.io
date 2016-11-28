@@ -46,7 +46,7 @@ sqrt(2)
 #+RESULTS:
 : [1] 1.414214
 
-#+BEGIN_SRC ipython :session mysession :file img/image_2.png :exports both
+#+BEGIN_SRC ipython :session mysession :file ./image_2.png :exports both
 %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -56,14 +56,14 @@ plt.plot(x, np.sin(x))
 #+END_SRC
 
 #+RESULTS:
-[[file:img/image_2.png]]
+[[file:./image_2.png]]
 
-#+BEGIN_SRC ipython :session mysession :file img/image.png :exports both
+#+BEGIN_SRC ipython :session mysession :file ./image.png :exports both
   plt.hist(np.random.randn(20000), bins=200)
 #+END_SRC
 
 #+RESULTS:
-[[file:img/image.png]]
+[[file:./image.png]]
 
 #+BEGIN_SRC ipython :session mysession :results value :exports both
 def foo(x):
