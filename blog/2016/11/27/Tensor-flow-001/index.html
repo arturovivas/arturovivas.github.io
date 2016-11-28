@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Tensor Flow - Simple graph - Arturo Vivas</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arturo Vivas" />
+    <meta name="description" content="Introduction to Tensor Flow" />
+    <meta name="keywords" content="tensor flow, linear algebra" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Arturo Vivas</a></h1>
+        <p>Deep Learning | Natural Language Processing | Big Data</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/arturovivas">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="arturovivas.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Tensor Flow - Simple graph</h1>
+<p>
+The first very very very small program using TensorFlow. In the following lines we are going to perform a sum of two scalars. This may sound trivial, yet the important concept in the following code is the "graph" behind it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-ipython" id="orgfb6af0b">import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+
+session = tf.Session()
+
+a = tf.constant(10, name="input_a")
+b = tf.constant(20, name="input_b")
+c = tf.add(a, b, name="add_c")
+
+result = session.run(c)
+(result)
+</pre>
+</div>
+
+<pre class="example">
+30
+</pre>
+
+
+<p>
+Here comes the interessting part, also pass auf! The small calculation Tensorflow  just did is the result of the computation of the <b>computational graph</b> defined in the code. The graphical visualization of the code would be the following:
+</p>
+
+
+
+<div class="figure">
+<p><img src="/assets/blog/2016/11/27/Tensor-flow-001/simple_graph.png" alt="simple_graph.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Our Program's graph</p>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2016-11-27</span>
+        <span title="last modification date" class="post-info">2016-11-28</span>
+        <span title="tags" class="post-info"><a href="/tags/tensor-flow/">tensor flow</a></span>
+        <span title="author" class="post-info">Arturo Vivas</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2016/11/27/Tensor-flow-001";
+          var disqus_url = "http://arturovivas.github.io/blog/2016/11/27/Tensor-flow-001";
+          var disqus_shortname = 'arturv';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-87942425-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <div class="footer">
+        <p>
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          </script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
