@@ -1,4 +1,4 @@
-#+TITLE:       Tensor Flow
+#+TITLE:       Tensor Flow - Simple graph
 #+AUTHOR:      Arturo Vivas
 #+EMAIL:       arturo.vivas@gmail.com
 #+DATE:        2016-11-27 So
@@ -11,6 +11,7 @@
 
 The first very very very small program using TensorFlow. In the following lines we are going to perform a sum of two scalars. This may sound trivial, yet the important concept in the following code is the "graph" behind it.
 
+#+NAME: tensorflow
 #+BEGIN_SRC ipython :session mysession :exports both
 import tensorflow as tf
 import numpy as np
@@ -26,9 +27,9 @@ result = session.run(c)
 (result)
 #+END_SRC
 
-#+CAPTION: Surprise Surprise the result is 30
-#+RESULTS:
+#+RESULTS: tensorflow
 : 30
+
 
 Here comes the interessting part, also pass auf! The small calculation Tensorflow  just did is the result of the computation of the *computational graph* defined in the code. The graphical visualization of the code would be the following:
 
