@@ -33,7 +33,7 @@ result = session.run(c)
 Here comes the interessting part, also pass auf! The small calculation Tensorflow  just did is the result of the computation of the *computational graph* defined in the code. The graphical visualization of the code would be the following:
 
 
-#+BEGIN_SRC dot :file ./img/simple_graph.png :cmdline -Kdot -Tpng :export none
+#+BEGIN_SRC dot :export none  :file ./img/simple_graph.png :cmdline -Kdot -Tpng  :results output silent
 digraph G {
 
           rankdir=LR
@@ -41,7 +41,7 @@ digraph G {
           nodesep=.05;
           x2 [label="10"];
           x1 [label="20"];
-          a12 [label="10+30"];
+          a12 [label="10+20"];
 
           subgraph cluster_0 {
 		  color=white;
@@ -63,8 +63,6 @@ digraph G {
 }
 #+END_SRC
 
-#+RESULTS:
-[[file:./img/simple_graph.png]]
 
 #+CAPTION: Our Program's graph
 [[file:./img/simple_graph.png]]
