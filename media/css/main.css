@@ -231,9 +231,9 @@ table th.right, table td.right {
 }
 /* searchform*/
 #searchform {
-    position: relative;
-    top: -145px;
-    float: right;
+    position: absolute;
+    top: 54px;
+    right: 30.4%;
 }
 #searchform #s {
     background: url("/media/img/search.png") no-repeat 5px 6px;
