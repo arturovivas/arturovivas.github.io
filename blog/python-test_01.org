@@ -29,7 +29,7 @@ Nothing serious just testing the functionalities of org-mode and ipython ;-)
   :  of 2016-04-17 on lgw01-04, modified by Debian
   : org version: 9.0.1
 
-#+BEGIN_SRC ipython :session mysession :results output :exports both
+#+BEGIN_SRC ipython :session p1 :results output :exports both
 print "There are %d hours in a week." % (7*24)
 2**10
 #+END_SRC
@@ -46,7 +46,7 @@ sqrt(2)
 #+RESULTS:
 : [1] 1.414214
 
-#+BEGIN_SRC ipython :session mysession :file ./img/image_2.png :exports code
+#+BEGIN_SRC ipython :session p1 :file ./img/image_2.png :exports code
 %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -59,9 +59,9 @@ plt.plot(x, np.sin(x))
 [[file:./img/image_2.png]]
 
 #+CAPTION: Test 1
-[[file:./img/img.png]]
+[[file:./img/image_2.png]]
 
-#+BEGIN_SRC ipython :session mysession :file ./img/image.png :exports code
+#+BEGIN_SRC ipython :session p1 :file ./img/image.png :exports code
   plt.hist(np.random.randn(20000), bins=200)
 #+END_SRC
 
@@ -71,7 +71,7 @@ plt.plot(x, np.sin(x))
 #+CAPTION: Test 2
 [[file:./img/image.png]]
 
-#+BEGIN_SRC ipython :session mysession :results value :exports both
+#+BEGIN_SRC ipython :session p1 :results value :exports both
 def foo(x):
     return x + 9
 
@@ -84,7 +84,7 @@ print x
 #+RESULTS:
 
 
-#+begin_src python :results output :session
+#+begin_src python :results output :session p1
 print "There are %d hours in a week." % (7*24)
 2**10
 #+end_src
@@ -94,16 +94,3 @@ print "There are %d hours in a week." % (7*24)
 : Out[5]: 1024
 : 
 : 
-
-#+begin_src ditaa :file ./img/blue.png :cmdline -r
-+---------+
-| cBLU    |
-|         |
-|    +----+
-|    |cPNK|
-|    |    |
-+----+----+
-#+end_src
-
-#+RESULTS:
-[[file:./img/blue.png]]
