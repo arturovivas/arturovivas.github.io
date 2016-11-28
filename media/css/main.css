@@ -33,6 +33,7 @@ html, body {
 }
 html {
     font-size: 62.5%;
+    overflow-y: scroll;
 }
 body {
     padding: 20px;
@@ -45,7 +46,19 @@ body {
 p {
     margin: 0 0 20px;
 }
-h1, h2, h3 {
+h1 {
+    position: relative;
+    margin: 30px 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #226764;
+    text-rendering: optimizeLegibility;
+}
+.masthead-title {
+    font-size: 38px;
+}
+h2 {
     position: relative;
     margin: 30px 0 20px;
     font-size: 18px;
@@ -53,7 +66,18 @@ h1, h2, h3 {
     line-height: 1.1;
     color: #111;
     text-rendering: optimizeLegibility;
+    text-align: left;
 }
+h3 {
+    position: relative;
+    margin: 30px 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #111;
+    text-rendering: optimizeLegibility;
+}
+
 h1:before, h2:before, h3:before {
     position: absolute;
     top: auto;
@@ -64,6 +88,7 @@ h1:before {
     content: "*";
     left: -1.25em;
 }
+
 h2:before {
     content: "**";
     left: -2em;
@@ -93,7 +118,7 @@ hr {
 hr:after {
     display: block;
     margin: 20px 0;
-    content: "----------------------------------------------------------------";
+    content: "";
     color: #ccc;
 }
 ul, ol {
@@ -107,7 +132,7 @@ code {
     color: #d14;
 }
 code:before, code:after {
-    content: "=";
+    content: "";
     color: #ccc;
 }
 pre {
@@ -133,10 +158,15 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 img {
-    display: block;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
 }
+
+.figure p {
+    text-align: center;
+}
+
 a {
     font-weight: inherit;
     line-height: inherit;
@@ -179,16 +209,17 @@ table th.right, table td.right {
 }
 .masthead:after {
     display: block;
-    content: '----------------------------------------------------------------';
+    content: '';
+    border-bottom: 1px dashed #666;
     margin: 10px 0;
     color: #ccc;
 }
 .masthead a {
     color: #333;
-    font-size: 21px;
 }
 .masthead ul {
     list-style: none;
+    font-size: 18px;
 }
 .masthead li {
     display: inline-block;
@@ -200,9 +231,9 @@ table th.right, table td.right {
 }
 /* searchform*/
 #searchform {
-    position: absolute;
-    top: 54px;
-    right: 30.4%;
+    position: relative;
+    top: -145px;
+    float: right;
 }
 #searchform #s {
     background: url("/media/img/search.png") no-repeat 5px 6px;
@@ -244,7 +275,8 @@ table th.right, table td.right {
 }
 .post:after {
     display: block;
-    content: "----------------------------------------------------------------";
+    content: "";
+    border-bottom: 1px dashed #666;
     color: #ccc;
 }
 .post img {
@@ -287,7 +319,7 @@ table th.right, table td.right {
     content: "\2223 \00a0";
 }
 .post-meta:after {
-    content: "----------------------------------------------------------------";
+    content: "";
     display: block;
     margin-top: -1px;
     color: #ccc;
@@ -380,3 +412,51 @@ table th.right, table td.right {
         padding: 30px;
     }
 }
+
+@media (max-width: 520px) {
+    body {
+        font-size: 14px;
+    }
+
+    .masthead ul {
+        font-size: 16px;
+    }
+
+    .masthead li {
+        display: block;
+    }
+
+    #table-of-contents {
+        position: relative;
+    }
+
+    #searchform #s {
+        display: none;
+    }
+
+    .masthead li + li:before {
+        content: "";
+    }
+    .post-info + .post-info:before {
+        content: "";
+    }
+
+    .masthead title {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .post-info {
+        margin: 0;
+        display: block;
+    }
+
+    .post ol > li:before {
+        margin-left: 0;
+    }
+} 
+
+    
