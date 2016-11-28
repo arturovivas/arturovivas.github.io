@@ -29,37 +29,5 @@ result = session.run(c)
 #+RESULTS:
 : 30
 
-Here comes the interessting part, also pass auf! The small calculation Tensorflow we just did is the result of the computation of the *computational graph* defined in the code. The graphical visualization of the code would be the following:
+Here comes the interessting part, also pass auf! The small calculation Tensorflow  just did is the result of the computation of the *computational graph* defined in the code. The graphical visualization of the code would be the following:
 
-#+BEGIN_SRC dot :file ./img/simple_graph.png :cmdline -Kdot -Tpng :export both
-digraph G {
-
-          rankdir=LR
-	  splines=line
-          nodesep=.05;
-          x2 [label="10"];
-          x1 [label="20"];
-          a12 [label="10+30"];
-
-          subgraph cluster_0 {
-		  color=white;
-                  node [style=solid,color=blue4, shape=circle];
-		  x1 x2 ;
-		  label = "layer 1 = Inputs";
-	  }
-
-	  subgraph cluster_1 {
-		  color=white;
-		  node [style=solid,color=red2, shape=circle];
-		  a12 ;
-		  label = "layer 2 = Output";
-	  }
-
-        x1 -> a12;
-        x2 -> a12;
-
-}
-#+END_SRC
-
-#+RESULTS:
-[[file:./img/simple_graph.png]]
