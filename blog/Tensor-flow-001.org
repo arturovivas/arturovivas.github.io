@@ -70,7 +70,7 @@ digraph G {
 
 This was a very simple example yet it shows TensorFlow's main functionality. *Tensors which flow along the computational Graph*. Let's see another example, this time with a more complex graph.
 
-#+BEGIN_SRC dot :export none  :file ./img/simple_graph_02.png :cmdline -Kdot -Tpng  :results output silent
+#+BEGIN_SRC dot :export none  :file ./img/simple_graph_02.png :cmdline -Kdot -Tpng  :results output 
 digraph G {
 
             rankdir=LR
@@ -178,6 +178,9 @@ digraph G {
   }
 
 #+END_SRC
+
+#+RESULTS:
+[[file:./img/simple_graph_02.png]]
 
 #+CAPTION: A graph with three layers and 50 connections
 file:[[./img/simple_graph_02.png]]
