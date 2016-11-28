@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Deep Learning Intro - Arturo Vivas</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arturo Vivas" />
+    <meta name="description" content="Intro" />
+    <meta name="keywords" content="deep learning, machine learning, python" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Arturo Vivas</a></h1>
+        <p></p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/arturovivas">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="arturovivas.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Deep Learning Intro</h1>
+<p>
+The game for the following days is to read the brand new book Deep Leaning from Ian Goodfellow, Yoshua Bengio and Aaraon Courville. The book is at this time just aviable in digital on the <a href="http://www.deeplearningbook.org/">http://www.deeplearningbook.org/</a> page. The book can be pre-ordered on Amazon, where you can also find the first review of the book, from a guy named Elon Musk (Who? :-P). 
+</p>
+
+<p>
+My approach will be to read most of the chapter (According to my shedule in one week :D) I will be doing a resume of the book according to what I find most relevant (Not so an easy task since the whole book is full of Information not just data, if you know what I mean). Parallel I will be testing the different concepts using mainly Tensor Flow. Legen wir mal los! 
+</p>
+
+
+<div id="outline-container-orgdba7b17" class="outline-2">
+<h2 id="orgdba7b17">Deep Learning</h2>
+<div class="outline-text-2" id="text-orgdba7b17">
+<p>
+The quintessential example of a deep learning model is the feedforward deep network or <b>multilayer perceptron</b> (MLP). A multilayer perceptron is just a mathematical function mapping some set of input values to output values. One perspective of deep learning is the idea of <b>learning the righ representation of the data</b>. Another perspective is that depth allows the computer to learn a multistep computer program.
+</p>
+
+<p>
+Sequential instructions offer great power because later instructions can refer back to the results of earlier instructions. Not all of the information in a layer's activations necessarily encodes factors of variation that explain the input. The representation also stores state information that helps to execute a program that can make sense of the input.
+</p>
+
+<p>
+There are two main ways of measuring the depth of a model. 
+</p>
+<ol class="org-ol">
+<li>Based on the number of sequential instructions that must be executed to evaluate the architecture. The length will depend on the computer language used, it will also depend on which fuctions we allow to be used as individual steps in a flowchart. The measure of the computational graph.</li>
+<li>The second approach doesn't take into account the depth of the computational graph, but the depth of the graph describing how concepts are related to each other. What is known as the measure of the concept graph or the probabilistic modeling graph.</li>
+</ol>
+
+<p>
+Deep learning can be regarded as the study of models that either involve a greater amount of composition of learned functions or learned concepts than traditional machine learning does. 
+</p>
+
+<p>
+Deep learning is a particular kind of machine learning that archives great power and flexibility by learning to represent the world as nested hierarchy of concepts, with each concept defined in relation to simpler concepts and more abstract representations computed in terms of less abstract ones. 
+</p>
+
+<p>
+The earliest predecessors of modern deep learning were simple linear models motivated from a neuroscientigic perspective. This models were designed to take a set of \(n\) input values \(x_1,...,x_n\) and associate them with an output \(y\). This models would learn a set of weights \(w_1,...,w_n\)  and compute their output \(f(x,w) = x_1w_1 + ... + x_nw_n\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc154636" class="outline-2">
+<h2 id="orgc154636">Historical aspects of Deep Learning</h2>
+<div class="outline-text-2" id="text-orgc154636">
+<p>
+There have been three waves of development of Deep Learning:
+</p>
+
+<ol class="org-ol">
+<li>Deep learning known as Cybernetics in the 1940s-1960s</li>
+<li>The early model used during this wave was the McCulloch-Pitts Neuron (McCulloch and Pits, 1943). This linear model could recognize two different categories of inputs by testing whether \(f(\textbf{x},\textbf{w})\) was positive or negative. <b>The weights were set by a human operator</b>.</li>
+<li>The perceptron (Rosenblatt, 1958, 1962) in the 1950s was the <b>first model able to learn the weights from data</b>. This model was also a binary classifier.</li>
+<li>The adaptative linear element (ADALINE) (Widrow and Hoff, 1960) model, differed to the perceptron mainly on the learning phase. The algorithm used to update the weights was the <b>stochastic gradiant desent</b>.</li>
+
+<li>Deep learning known as Connectionism in the 1980s-1990s</li>
+<li>This movement was called connectionism or parallel distributed processing (Rumelhart <i>et  al.</i>, 1986c; McClelland <i>et al.</i>, 1995). The driving idea during this century was that a large number of simple computational units can archive intelligent behavior when networked together. This concept and others from this decade are still central to today's deep learning.</li>
+<li><b>Distributed representation</b> (Hinton <i>et al.</i>, 1986) is also another of these concepts. The ideas is that each feature should be involved in the representation of many possible inputs.</li>
+<li>The sucessful use of the back-propagration algorithm (Rumelhart <i>et al.</i>, 1986a; LeCun, 1987) to train deep networks was another major accomplishment.</li>
+<li>In the 1990s many important advances in modeling sequences with neural networks were made. The identification of some of the fundamental mathematical difficulties in modeling long sequences (Hochreiter, 1991; Bengio <i>et al.</i>, 1994). The introduction of the long short-term memory LSTM networks (Hochreiter and Schmidhuber, 1997).</li>
+
+<li>The current resurgence under the name deep learning beginning in 2006.</li>
+<li>In 2006 there was a breakthrough leaded by Geoffrey Hinton. It was shown that a kind of neural network called a deep belief network could be efficiently trained using a strategy called greedy layer-wise pre-training(Hinton et al. 2006). Other followed showing that the same strateg could be used to train many other kinds of deep networks (Bengio <i>et al.</i>, 2007; Ranzato et al., 2007a). This wave of neural network research popularized the use of the term <b>deep learning</b> to emphasize that researchers were now able to train deeper neural networks than had been possible before, and to focus the attention on the theoretical importance of depth (Bengio and LeCun, 2007; Delalleau and Bengio, 2001; Pascanu <i>et al.</i>, 2014a; Montufar <i>et al.</i>, 2014).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0d02b38" class="outline-2">
+<h2 id="org0d02b38">About the increasing Dataset and Model SIzes</h2>
+<div class="outline-text-2" id="text-org0d02b38">
+<ul class="org-ul">
+<li>The learning algorithms reaching human performance on complex tasks today are nearly identical to the learning algorithms that struggled to solve toy problems in the 1980s. The most important new development is that today we can provide these algorithms with the resources they need to succeed, among them an incrisingly amount of data.</li>
+<li>As of 2016, a rough rule of thumb is that supervised deep learning algorithm will generally achieve acceptable performance with around 5,000 labeled examples per category, and will match or exceed human performance when trained with a dataset containing at least 10 million labeled examples.</li>
+<li>Another key reaosn is that we have the computational resources to run much larger models today. In terms of the total number of neurons, neural networks have been astonishingly small until quite recently. Since the introduction of hidden units, artificial neural networks have doubled in size roughly evey 2.4 years. At the current date, the number of neurons in some models is a bit below 10,0000,000.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org41d72dc" class="outline-2">
+<h2 id="org41d72dc">Some other interesting things from the chapter</h2>
+<div class="outline-text-2" id="text-org41d72dc">
+<p>
+Libreries for Deep Learning implementation:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://deeplearning.net/software/theano/">Theano</a></li>
+<li><a href="http://deeplearning.net/software/pylearn2/">Pylearn2</a></li>
+<li><a href="http://torch.ch/whoweare.html">Torch</a></li>
+<li><a href="http://caffe.berkeleyvision.org/">Caffe</a></li>
+<li><a href="http://mxnet.io/">MXNet</a></li>
+<li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2016-11-25</span>
+        <span title="last modification date" class="post-info">2016-11-26</span>
+        <span title="tags" class="post-info"><a href="/tags/deep-learning-book/">deep learning book</a></span>
+        <span title="author" class="post-info">Arturo Vivas</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2016/11/26/deep-learning-intro";
+          var disqus_url = "http://arturovivas.github.io/blog/2016/11/26/deep-learning-intro";
+          var disqus_shortname = 'arturv';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-87942425-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <div class="footer">
+        <p>
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          </script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
