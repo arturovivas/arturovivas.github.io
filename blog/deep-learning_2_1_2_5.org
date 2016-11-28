@@ -1,6 +1,6 @@
 #+TITLE:       Deep Learning Chapter II Part I
-#+AUTHOR:      Magic35
-#+EMAIL:       magic35@arturo.vivas@gmail.com
+#+AUTHOR:      Arturo Vivas
+#+EMAIL:       arturo.vivas@gmail.com
 #+DATE:        2016-11-26 Sa
 #+URI:         /blog/%y/%m/%d/deep-learning-chapter-ii-part-i
 #+KEYWORDS:    deep learning, machine learning, linear algebra

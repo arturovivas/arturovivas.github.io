@@ -2,7 +2,7 @@
 #+AUTHOR:      Arturo Vivas
 #+EMAIL:       arturo.vivas@outlook.de
 #+DATE:        2016-11-25 Fr
-#+URI:         /blog/%y/%m/%d/python-test_001
+#+URI:         /blog/%y/%m/%d/python
 #+KEYWORDS:    python
 #+TAGS:        Machine Learning
 #+LANGUAGE:    en
