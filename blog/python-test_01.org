@@ -71,7 +71,7 @@ plt.plot(x, np.sin(x))
 #+CAPTION: Test 2
 [[file:./img/image.png]]
 
-#+BEGIN_SRC ipython :session p1 :results value :exports both :cache yes
+#+BEGIN_SRC ipython :session p1 :results value :exports both :cache1 yes
 def foo(x):
     return x + 9
 
