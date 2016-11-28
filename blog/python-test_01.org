@@ -46,7 +46,7 @@ sqrt(2)
 #+RESULTS:
 : [1] 1.414214
 
-#+BEGIN_SRC ipython :session mysession :file ./image_2.png :exports both
+#+BEGIN_SRC ipython :session mysession :file ./img/image_2.png :exports code
 %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -56,14 +56,20 @@ plt.plot(x, np.sin(x))
 #+END_SRC
 
 #+RESULTS:
-[[file:./image_2.png]]
+[[file:./img/image_2.png]]
 
-#+BEGIN_SRC ipython :session mysession :file ./image.png :exports both
+#+CAPTION: Test 1
+[[file:./img/img.png]]
+
+#+BEGIN_SRC ipython :session mysession :file ./img/image.png :exports code
   plt.hist(np.random.randn(20000), bins=200)
 #+END_SRC
 
 #+RESULTS:
-[[file:./image.png]]
+[[file:./img/image.png]]
+
+#+CAPTION: Test 2
+[[file:./img/image.png]]
 
 #+BEGIN_SRC ipython :session mysession :results value :exports both
 def foo(x):
@@ -89,3 +95,15 @@ print "There are %d hours in a week." % (7*24)
 : 
 : 
 
+#+begin_src ditaa :file ./img/blue.png :cmdline -r
++---------+
+| cBLU    |
+|         |
+|    +----+
+|    |cPNK|
+|    |    |
++----+----+
+#+end_src
+
+#+RESULTS:
+[[file:./img/blue.png]]
