@@ -34,7 +34,7 @@ result = session.run(c)
 Here comes the interessting part, also pass auf! The small calculation Tensorflow  just did is the result of the computation of the *computational graph* defined in the code. The graphical visualization of the code would be the following:
 
 
-#+BEGIN_SRC dot :export none  :file ./img/simple_graph.png :cmdline -Kdot -Tpng  :results output silent
+#+BEGIN_SRC dot :export none  :file ./img/s1.png :cmdline -Kdot -Tpng  :results output silent
 digraph G {
 
           rankdir=LR
@@ -66,121 +66,106 @@ digraph G {
 
 
 #+CAPTION: Our Program's graph
-[[file:./img/simple_graph.png]]
+[[file:./img/s1.png]]
 
-This was a very simple example yet it shows TensorFlow's main functionality. *Tensors which flow along the computational Graph*. Let's see another example, this time with a more complex graph.
+This was a very simple example yet, it shows TensorFlow's main functionality. *Tensors which flow along the computational Graph*. Let's see another example, this time with a bigger graph.
 
-#+BEGIN_SRC dot :export none  :file ./img/simple_graph_02.png :cmdline -Kdot -Tpng  :results output 
-digraph G {
+#+BEGIN_SRC dot :export none  :file ./img/s2.png :cmdline -Kdot -Tpng  :results output silent
+  digraph G {
 
-            rankdir=LR
-	    splines=line
-            nodesep=.05;
-            x1 [label="x1"];
-            x2 [label="x2"];
-            x3 [label="x3"];
-            x4 [label="x4"];
-            x5 [label="x5"];
+              rankdir=LR
+	      splines=line
+              nodesep=.05;
+              x1 [label="x1"];
+              x2 [label="x2"];
 
-            a12 [label="h1"];
-            a22 [label="h2"];
-            a32 [label="h3"];
-            a42 [label="h4"];
-            a52 [label="h5"];
+              a12 [label="h11"];
+              a22 [label="h11"];
+   
+              a13 [label="h12"];
+              a23 [label="h22"];
+  
+              a14 [label="o1"];
+              a24 [label="o2"];
 
-            a13 [label="o1"];
-            a23 [label="o2"];
-            a33 [label="o3"];
-            a43 [label="o4"];
-            a53 [label="o5"];
 
-            subgraph cluster_0 {
-		    color=white;
-                    node [style=solid,color=blue4, shape=circle];
-		    x1 x2 x3 x4 x5;
-		    label = "layer 1 = Inputs";
-	    }
+              subgraph cluster_0 {
+		      color=white;
+                      node [style=solid,color=blue4, shape=circle];
+		      x1 x2;
+		      label = "layer 1 = Inputs";
+	      }
 
-	    subgraph cluster_1 {
-		    color=white;
-		    node [style=solid,color=red2, shape=circle];
-		    a12 a22 a32 a42 a52;
-		    label = "layer 2 = Hidden Layer";
-	    }
+	      subgraph cluster_1 {
+		      color=white;
+		      node [style=solid,color=red2, shape=circle];
+		      a12 a22;
+		      label = "layer 2 = Hidden Layer (sum)";
+	      }
 
-            subgraph cluster_3 {
-		    color=white;
-		    node [style=solid,color=red2, shape=circle];
-		    a13 a23 a33 a43 a53;
-		    label = "layer 3 = Output Layer";
-	    }
+              subgraph cluster_3 {
+		      color=white;
+		      node [style=solid,color=red2, shape=circle];
+		      a13 a23;
+		      label = "layer 3 = Hidden Layer (multiplication)";
+	      }
 
-          x1 -> a12;
-          x1 -> a22;
-          x1 -> a32;
-          x1 -> a42;
-          x1 -> a52;
+             subgraph cluster_4 {
+		      color=white;
+		      node [style=solid,color=red2, shape=circle];
+		      a14 a24;
+		      label = "layer 3 = Output Layer (divide)";
+	      }
 
-          x2 -> a12;
-          x2 -> a22;
-          x2 -> a32;
-          x2 -> a42;
-          x2 -> a52;
- 
-          x3 -> a12;
-          x3 -> a22;
-          x3 -> a32;
-          x3 -> a42;
-          x3 -> a52;
+            x1 -> a12;
+            x1 -> a22;
 
-          x4 -> a12;
-          x4 -> a22;
-          x4 -> a32;
-          x4 -> a42;
-          x4 -> a52;
-          
-          x5 -> a12;
-          x5 -> a22;
-          x5 -> a32;
-          x5 -> a42;
-          x5 -> a52;
+            x2 -> a12;
+            x2 -> a22;
+             
+            a12 -> a13;
+            a12 -> a23;
 
-          a12 -> a13;
-          a12 -> a23;
-          a12 -> a33;
-          a12 -> a43;
-          a12 -> a53;
-          
-          a22 -> a13;
-          a22 -> a23;
-          a22 -> a33;
-          a22 -> a43;
-          a22 -> a53;
+            a22 -> a13;  
+            a22 -> a23;            
 
-          a32 -> a13;
-          a32 -> a23;
-          a32 -> a33;
-          a32 -> a43;
-          a32 -> a53;
+            a13 -> a14;
+            a13 -> a24;
 
-          a42 -> a13;
-          a42 -> a23;
-          a42 -> a33;
-          a42 -> a43;
-          a42 -> a53;
-
-          a52 -> a13;
-          a52 -> a23;
-          a52 -> a33;
-          a52 -> a43;
-          a52 -> a53;
-
-  }
+            a23 -> a14;
+            a23 -> a24; 
+    }
 
 #+END_SRC
 
-#+RESULTS:
-[[file:./img/simple_graph_02.png]]
+#+CAPTION: A graph with four layers and 50 connections
+[[file:./img/s2.png]]
 
-#+CAPTION: A graph with three layers and 50 connections
-file:[[./img/simple_graph_02.png]]
+The TF-Code to this graph is the following:
+
+#+BEGIN_SRC ipython :session mysession :export both
+# Let's create a new tensorflow sesion
+tfs2 =tf.Session()
+
+# Let's create each one of our input variables assigning them a value 
+x1=tf.constant(23, name="x1")
+x2=tf.constant(34, name="x2")
+
+# Let's define the interactions of the first layer with the second one
+h11=tf.add(x1,x2, name="h11")
+h21=tf.add(x1,x2, name="h21")
+
+# The interacions between the second layer and the third
+h12=tf.add(h11,h21, name="h11")
+h22=tf.add(h11,h21, name="h21")
+
+# Let's define the outputlayer 
+o1=tf.div(h12,h22, name="o1")
+o2=tf.div(h12,h22, name="o2")
+
+# With the next command TF will evaluate the node "o5"
+tfs2.run(o1)
+#+END_SRC
+
+#+RESULTS:
+: 1
