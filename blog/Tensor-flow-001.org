@@ -107,7 +107,7 @@ This was a very simple example yet, it shows TensorFlow's main functionality. *T
 		      color=white;
 		      node [style=solid,color=red2, shape=circle];
 		      a13 a23;
-		      label = "layer 3 = Hidden Layer (multiplication)";
+		      label = "layer 3 = Hidden Layer (power)";
 	      }
 
              subgraph cluster_4 {
@@ -138,7 +138,7 @@ This was a very simple example yet, it shows TensorFlow's main functionality. *T
 
 #+END_SRC
 
-#+CAPTION: A graph with four layers and 50 connections
+#+CAPTION: A graph with four layers and 12 connections
 [[file:./img/s2.png]]
 
 The TF-Code to this graph is the following:
@@ -156,8 +156,8 @@ h11=tf.add(x1,x2, name="h11")
 h21=tf.add(x1,x2, name="h21")
 
 # The interacions between the second layer and the third
-h12=tf.add(h11,h21, name="h11")
-h22=tf.add(h11,h21, name="h21")
+h12= tf.pow(h11, h21, name="h11")
+h22= tf.pow(h11, h21, name="h21")
 
 # Let's define the outputlayer 
 o1=tf.div(h12,h22, name="o1")
