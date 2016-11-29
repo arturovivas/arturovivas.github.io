@@ -2,39 +2,39 @@
 <rss version="2.0">
   <channel>
     <title>Arturo Vivas</title>
-    <link>http://arturovivas.github.io/</link>
-    <description>Deep Learning | Natural Language Processing | Big Data</description>
-    <pubDate>Mo, 28 Nov 2016 15:33:09 CET</pubDate>
-    <lastBuildDate>Mo, 28 Nov 2016 15:33:09 CET</lastBuildDate>
+    <link>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link</link>
+    <description>Deep Learning | Natural Language Processing | Statistics | Big Data </description>
+    <pubDate>Di, 29 Nov 2016 11:47:34 CET</pubDate>
+    <lastBuildDate>Di, 29 Nov 2016 11:47:34 CET</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
     <item>
       <title>Tensor Flow - Simple graph</title>
-      <link>http://arturovivas.github.io/blog/2016/11/27/Tensor-flow-001</link>
+      <link>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/27/Tensor-flow-001</link>
       <description><![CDATA[Introduction to Tensor Flow]]></description>
-      <pubDate>2016-11-28</pubDate>
-      <guid>http://arturovivas.github.io/blog/2016/11/27/Tensor-flow-001</guid>
+      <pubDate>2016-11-29</pubDate>
+      <guid>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/27/Tensor-flow-001</guid>
     </item>
     <item>
       <title>Deep Learning Chapter II Part I</title>
-      <link>http://arturovivas.github.io/blog/2016/11/26/deep-learning-chapter-ii-part-i</link>
+      <link>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/26/deep-learning-chapter-ii-part-i</link>
       <description><![CDATA[Chapter 2 Deep Learning Book]]></description>
       <pubDate>2016-11-28</pubDate>
-      <guid>http://arturovivas.github.io/blog/2016/11/26/deep-learning-chapter-ii-part-i</guid>
+      <guid>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/26/deep-learning-chapter-ii-part-i</guid>
     </item>
     <item>
       <title>Python</title>
-      <link>http://arturovivas.github.io/blog/2016/11/25/python</link>
+      <link>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/25/python</link>
       <description><![CDATA[This is a test]]></description>
       <pubDate>2016-11-28</pubDate>
-      <guid>http://arturovivas.github.io/blog/2016/11/25/python</guid>
+      <guid>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/25/python</guid>
     </item>
     <item>
       <title>Deep Learning Intro</title>
-      <link>http://arturovivas.github.io/blog/2016/11/26/deep-learning-intro</link>
+      <link>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/26/deep-learning-intro</link>
       <description><![CDATA[Intro]]></description>
       <pubDate>2016-11-26</pubDate>
-      <guid>http://arturovivas.github.io/blog/2016/11/26/deep-learning-intro</guid>
+      <guid>https://github.com/arturovivas?utm_source=blog&amp;utm_campaign=who&amp;utm_medium=link/blog/2016/11/26/deep-learning-intro</guid>
     </item>
   </channel>
 </rss>
